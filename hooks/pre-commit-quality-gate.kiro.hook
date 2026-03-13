@@ -1,0 +1,14 @@
+{
+  "enabled": true,
+  "name": "🔍 Pre-Commit Quality Gate",
+  "description": "Automated quality checks before any code write operation - prevents bad code from being written",
+  "version": "1.0.0",
+  "when": {
+    "type": "preToolUse",
+    "toolTypes": ["write"]
+  },
+  "then": {
+    "type": "askAgent",
+    "prompt": "⚠️ PRE-COMMIT QUALITY GATE ACTIVATED\n\nBefore writing code, verify:\n\n✅ CODE QUALITY CHECKS:\n├─ No hardcoded secrets or API keys\n├─ No console.log / print statements (use logger)\n├─ No TODO/FIXME without ticket reference\n├─ No commented-out code blocks\n├─ Proper error handling implemented\n├─ Input validation for user data\n└─ No SQL injection vulnerabilities\n\n✅ SECURITY CHECKS:\n├─ No eval() or exec() usage\n├─ No unsafe regex patterns (ReDoS)\n├─ No insecure dependencies\n├─ Proper authentication/authorization\n└─ HTTPS/TLS for external calls\n\n✅ PERFORMANCE CHECKS:\n├─ No N+1 query problems\n├─ Proper database indexing\n├─ Efficient algorithms (avoid O(n²))\n├─ No memory leaks\n└─ Lazy loading where appropriate\n\n✅ BEST PRACTICES:\n├─ Follows SOLID principles\n├─ Proper naming conventions\n├─ Code is self-documenting\n├─ Single responsibility\n└─ DRY principle applied\n\nIf all checks pass, proceed with write operation. Otherwise, fix issues first."
+  }
+}

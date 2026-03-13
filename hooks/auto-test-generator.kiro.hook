@@ -1,0 +1,13 @@
+{
+  "enabled": true,
+  "name": "🧪 Auto Test Generator",
+  "description": "Automatically suggests test cases after task completion",
+  "version": "1.0.0",
+  "when": {
+    "type": "postTaskExecution"
+  },
+  "then": {
+    "type": "askAgent",
+    "prompt": "🧪 AUTO TEST GENERATOR ACTIVATED\n\nTask completed! Now generate comprehensive test coverage:\n\n📋 TEST STRATEGY:\n\n1️⃣ UNIT TESTS (70% of tests)\n├─ Test each function in isolation\n├─ Mock external dependencies\n├─ Cover happy path scenarios\n├─ Cover edge cases\n├─ Cover error scenarios\n└─ Test boundary conditions\n\n2️⃣ INTEGRATION TESTS (20% of tests)\n├─ Test component interactions\n├─ Test API endpoints\n├─ Test database operations\n├─ Test external service integrations\n└─ Test authentication flows\n\n3️⃣ E2E TESTS (10% of tests)\n├─ Test critical user journeys\n├─ Test complete workflows\n├─ Test cross-browser compatibility\n└─ Test responsive design\n\n🎯 TEST CASES TO GENERATE:\n\nFor each function/component:\n├─ ✓ Happy path test\n├─ ✓ Invalid input test\n├─ ✓ Null/undefined handling\n├─ ✓ Empty data handling\n├─ ✓ Large data handling\n├─ ✓ Concurrent access test\n├─ ✓ Error recovery test\n└─ ✓ Performance test\n\n📊 COVERAGE GOALS:\n├─ Line coverage: > 80%\n├─ Branch coverage: > 75%\n├─ Function coverage: > 90%\n└─ Statement coverage: > 80%\n\n🔧 TEST FRAMEWORKS:\n├─ JavaScript/TypeScript: Jest, Vitest, Cypress\n├─ Python: pytest, unittest\n├─ Go: testing package\n├─ Java: JUnit, Mockito\n└─ API: Supertest, REST Assured\n\n💡 Generate test file structure and suggest 5-10 critical test cases to implement."
+  }
+}

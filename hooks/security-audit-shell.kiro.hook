@@ -1,0 +1,14 @@
+{
+  "enabled": true,
+  "name": "🔒 Security Audit on Shell Commands",
+  "description": "Security validation before executing any shell command",
+  "version": "1.0.0",
+  "when": {
+    "type": "preToolUse",
+    "toolTypes": ["shell"]
+  },
+  "then": {
+    "type": "askAgent",
+    "prompt": "🔒 SECURITY AUDIT ACTIVATED - Shell Command Validation\n\n⚠️ Before executing shell command, verify:\n\n🚨 DANGEROUS PATTERNS (BLOCK IF FOUND):\n├─ ❌ rm -rf / or rm -rf /*\n├─ ❌ chmod 777 (overly permissive)\n├─ ❌ curl | bash (pipe to shell)\n├─ ❌ eval with user input\n├─ ❌ Unquoted variables in rm/mv\n├─ ❌ sudo without specific command\n├─ ❌ Commands with hardcoded credentials\n└─ ❌ Destructive operations without confirmation\n\n✅ SECURITY CHECKS:\n├─ Command is properly escaped\n├─ No command injection vulnerabilities\n├─ File paths are validated\n├─ Permissions are appropriate\n├─ No secrets in command\n└─ Destructive operations are intentional\n\n💡 SAFE ALTERNATIVES:\n├─ Use specific paths instead of wildcards\n├─ Quote all variables\n├─ Use --dry-run for testing\n├─ Prefer built-in tools over curl | bash\n└─ Use environment variables for secrets\n\n🔍 If command is safe, proceed. If dangerous, suggest safer alternative."
+  }
+}

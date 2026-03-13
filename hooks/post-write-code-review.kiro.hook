@@ -1,0 +1,14 @@
+{
+  "enabled": true,
+  "name": "📝 Post-Write Code Review",
+  "description": "Automated code review after any write operation - ensures code quality and suggests improvements",
+  "version": "1.0.0",
+  "when": {
+    "type": "postToolUse",
+    "toolTypes": ["write"]
+  },
+  "then": {
+    "type": "askAgent",
+    "prompt": "🔍 POST-WRITE CODE REVIEW ACTIVATED\n\nReview the code that was just written:\n\n📋 REVIEW CHECKLIST:\n\n1️⃣ FUNCTIONALITY\n├─ Does it solve the intended problem?\n├─ Are edge cases handled?\n├─ Is error handling comprehensive?\n└─ Are there any logical bugs?\n\n2️⃣ CODE QUALITY\n├─ Is the code readable and maintainable?\n├─ Are variable/function names descriptive?\n├─ Is there unnecessary complexity?\n├─ Can any code be simplified?\n└─ Is there code duplication?\n\n3️⃣ PERFORMANCE\n├─ Are there any performance bottlenecks?\n├─ Is the algorithm efficient?\n├─ Are database queries optimized?\n└─ Is caching used appropriately?\n\n4️⃣ SECURITY\n├─ Are inputs validated and sanitized?\n├─ Are there any injection vulnerabilities?\n├─ Is sensitive data properly protected?\n└─ Are authentication/authorization correct?\n\n5️⃣ TESTING\n├─ Are unit tests needed?\n├─ What test cases should be added?\n├─ Are integration tests required?\n└─ Should e2e tests be updated?\n\n6️⃣ DOCUMENTATION\n├─ Are complex parts commented?\n├─ Is API documentation needed?\n├─ Should README be updated?\n└─ Are types/interfaces documented?\n\n💡 SUGGESTIONS:\nProvide 2-3 specific improvement suggestions if any issues found.\n\n✅ If code is production-ready, confirm with: 'Code review passed ✓'"
+  }
+}
