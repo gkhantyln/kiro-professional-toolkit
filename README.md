@@ -595,7 +595,7 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ## 🙏 Acknowledgments
 
-- [Kiro IDE](https://kiro.ai) team for creating an amazing development environment
+- [Kiro IDE](https://kiro.dev) team for creating an amazing development environment
 - All contributors who have helped improve this toolkit
 - The open-source community for inspiration and feedback
 
