@@ -1,0 +1,14 @@
+{
+  "enabled": true,
+  "name": "⚖️ License Compliance",
+  "description": "Checks open source license compatibility and flags GPL/AGPL dependencies that may conflict with commercial use",
+  "version": "1.0.0",
+  "when": {
+    "type": "fileEdited",
+    "patterns": ["package.json", "requirements.txt", "pyproject.toml", "go.mod", "Cargo.toml", "pom.xml"]
+  },
+  "then": {
+    "type": "askAgent",
+    "prompt": "⚖️ LICENSE COMPLIANCE CHECK\n\n═══════════════════════════════════════════════════════════════\nA dependency file was modified. Perform a license compliance audit:\n═══════════════════════════════════════════════════════════════\n\n**LICENSE RISK LEVELS:**\n\n🟢 PERMISSIVE (safe for commercial use):\n  MIT, Apache 2.0, BSD 2/3-Clause, ISC, Unlicense, CC0\n  → Can use freely, just include attribution\n\n🟡 WEAK COPYLEFT (caution needed):\n  LGPL 2.1/3.0, MPL 2.0, CDDL, EPL\n  → Library use OK, but modifications must be open-sourced\n  → Dynamic linking usually safe, static linking may not be\n\n🔴 STRONG COPYLEFT (commercial risk):\n  GPL 2.0/3.0, AGPL 3.0\n  → GPL: If you distribute software using GPL code, your code must also be GPL\n  → AGPL: Even SaaS/network use triggers copyleft — high risk for commercial products\n\n⚫ PROPRIETARY / UNKNOWN:\n  No license = All rights reserved by default\n  Custom licenses = Legal review required\n\n**AUDIT TASKS:**\n\n1. Scan all direct dependencies for license type\n2. Flag any GPL/AGPL dependencies with explanation of risk\n3. Check for license conflicts (e.g., GPL + Apache 2.0 incompatibility)\n4. Identify dependencies with no license (legally risky)\n5. Check if project license is compatible with all dependency licenses\n\n**OUTPUT FORMAT:**\n```\n## License Compliance Report\n\n### Project License: MIT\n\n### 🔴 HIGH RISK (requires legal review)\n  package-name@version — GPL-3.0\n  Risk: Copyleft may require open-sourcing your code\n  Alternative: [suggest MIT/Apache alternative if exists]\n\n### 🟡 MEDIUM RISK (review needed)\n  package-name@version — LGPL-3.0\n  Risk: Modifications to this library must be open-sourced\n  Action: Ensure dynamic linking only\n\n### ✅ COMPLIANT\n  X dependencies — all permissive licenses\n\n### RECOMMENDED ACTIONS\n  1. Replace [package] with [alternative]\n  2. Add license headers to source files\n  3. Include NOTICE file for Apache 2.0 deps\n```\n\nAnalyze the dependency file and provide a complete license compliance report."
+  }
+}

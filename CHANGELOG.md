@@ -2,6 +2,50 @@
 
 All notable changes to Kiro Professional Toolkit will be documented in this file.
 
+## [2.0.0] - 2026-03-14
+
+### 🚀 Major Expansion Release
+
+#### ✨ Yeni Özellikler
+
+**🤖 Yeni AI Agents (2 adet, toplam: 34)**
+- **Java Spring Expert**: Spring Boot 3.3, Java 21 virtual threads, JPA optimizasyonu, Testcontainers, GraalVM native image
+- **FinOps Architect**: Maliyet-mimari dengesi, right-sizing, IaC cost analysis, FinOps Framework
+
+**🎯 Yeni Hooks (2 adet, toplam: 32)**
+- **Dependency Update Checker**: Güvenlik açıkları, outdated paketler, breaking change analizi, upgrade yolu
+- **License Compliance**: GPL/AGPL riski tespiti, lisans uyumluluğu kontrolü, SBOM üretimi
+
+**📋 Yeni Steering Dosyaları (4 adet, toplam: 22)**
+- **java-best-practices.md**: Spring Boot 3, Java 21 virtual threads, JPA, Testcontainers (FILE MATCH: `**/*.java`)
+- **kotlin-best-practices.md**: Coroutines, Flow, sealed classes, value classes, KMP (FILE MATCH: `**/*.{kt,kts}`)
+- **graphql-standards.md**: Schema tasarımı, DataLoader, Relay pagination, depth limiting (FILE MATCH: `**/*.{graphql,gql}`)
+- **infrastructure-as-code.md**: Terraform modules, remote state, Pulumi TypeScript, AWS CDK (FILE MATCH: `**/*.{tf,tfvars,pulumi}`)
+
+**💪 Yeni Skills (5 adet, toplam: 50)**
+- **create-rust-service**: Axum + Tokio + SQLx + Tower middleware + OpenTelemetry
+- **create-java-spring-service**: Spring Boot 3.3 + Java 21 virtual threads + Testcontainers + GraalVM
+- **setup-graphql-server**: Apollo/Yoga + Pothos schema builder + DataLoader + persisted queries
+- **setup-message-queue**: RabbitMQ + AWS SQS + DLQ + retry/backoff + Outbox pattern
+- **setup-cdn-edge**: Cloudflare Workers + Hono + Durable Objects + KV + R2
+
+#### 📊 Güncel Sayılar
+| Bileşen | v1.0.0 | v2.0.0 |
+|---------|--------|--------|
+| Agents | 8 | 34 |
+| Hooks | 19 | 32 |
+| Steering | 10 | 22 |
+| Skills | 14 | 50 |
+| MCP | 16 | 44 |
+
+#### 🔧 İyileştirmeler
+- Tüm README dosyaları güncellendi
+- `install.bat` ve `install.py` doğru sayılarla güncellendi
+- `KURULUM_KONTROL.md` tüm yeni dosyalarla güncellendi
+- Hooks QUICK-REFERENCE.md güncellendi
+
+---
+
 ## [1.0.0] - 2024-03-13
 
 ### 🎉 Initial Release

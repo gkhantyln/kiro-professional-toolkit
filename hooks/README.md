@@ -50,7 +50,38 @@ Agent Hooks, belirli olaylar gerçekleştiğinde otomatik olarak çalışan akı
 
 ---
 
-### 2. 🏗️ Architecture Review
+### 2. 👥 Enterprise Dev Team
+**Dosya:** `enterprise-dev-team.kiro.hook`  
+**Event:** `preTaskExecution`  
+**Durum:** ✅ Enabled
+
+**Ne yapar:**
+- 5 rol içeren world-class geliştirme ekibi simüle eder (Owner/PM, Frontend, Backend, UI/UX, QA)
+- Görevleri role göre otomatik atar
+- İteratif deliverable üretimi ve progress raporlaması
+- Kod standartları, versiyon kontrolü, dokümantasyon ve review süreçleri
+
+**Ne zaman kullanılır:**
+- Ekip bazlı geliştirme simülasyonu için
+- Rol odaklı task breakdown gerektiğinde
+
+---
+
+### 3. 👥 Enterprise Dev Team V2
+**Dosya:** `enterprise-dev-team-v2.kiro.hook`  
+**Event:** `preTaskExecution`  
+**Durum:** ✅ Enabled
+
+**Ne yapar:**
+- Enterprise Dev Team'in geliştirilmiş versiyonu
+- Genişletilmiş rol tanımları ve workflow iyileştirmeleri
+
+**Ne zaman kullanılır:**
+- Enterprise Dev Team'in güncel versiyonu olarak
+
+---
+
+### 4. 🏗️ Architecture Review
 **Dosya:** `architecture-review.kiro.hook`  
 **Event:** `preTaskExecution`  
 **Durum:** ✅ Enabled
@@ -71,7 +102,7 @@ Agent Hooks, belirli olaylar gerçekleştiğinde otomatik olarak çalışan akı
 
 ## 🔒 QUALITY & SECURITY HOOKS
 
-### 3. 🔍 Pre-Commit Quality Gate
+### 5. 🔍 Pre-Commit Quality Gate
 **Dosya:** `pre-commit-quality-gate.kiro.hook`  
 **Event:** `preToolUse` (write operations)  
 **Durum:** ✅ Enabled
@@ -544,6 +575,30 @@ Fixes #456
 
 ---
 
+### 29. 📦 Dependency Update Checker
+**Dosya:** `dependency-update-checker.kiro.hook`  
+**Event:** `fileEdited` (package.json, requirements.txt, go.mod, Cargo.toml vb.)
+
+**Ne yapar:**
+- Güvenlik açığı olan bağımlılıkları tespit eder
+- Outdated paketleri listeler
+- Güvenli upgrade yolunu gösterir
+- Lisans uyumluluğunu kontrol eder
+
+---
+
+### 30. ⚖️ License Compliance
+**Dosya:** `license-compliance.kiro.hook`  
+**Event:** `fileEdited` (package.json, requirements.txt, go.mod, Cargo.toml vb.)
+
+**Ne yapar:**
+- GPL/AGPL bağımlılıklarını tespit eder
+- Ticari kullanım risklerini açıklar
+- Lisans uyumsuzluklarını raporlar
+- Güvenli alternatifler önerir
+
+---
+
 ## 🎯 KULLANIM ÖRNEKLERİ
 
 ### Senaryo 1: Yeni Feature Geliştirme
@@ -781,4 +836,4 @@ Bu Enterprise Agent Hooks sistemi ile:
 ✅ Best practices otomatik uygulanır
 ✅ Expert knowledge her zaman erişilebilir
 
-**Toplam 28 profesyonel hook ile enterprise seviyesinde geliştirme yapabilirsiniz!** 🚀
+**Toplam 32 profesyonel hook ile enterprise seviyesinde geliştirme yapabilirsiniz!** 🚀

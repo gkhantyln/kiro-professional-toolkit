@@ -12,7 +12,8 @@
 | ♿ Accessibility Validator | postToolUse (write) | WCAG 2.1 AA compliance |
 | 🧪 Auto Test Generator | postTaskExecution | Test strategy, test cases |
 | 📊 Performance Monitoring | postTaskExecution | Core Web Vitals, API metrics |
-| 📝 Git Commit Standards | agentStop | Conventional commits, message suggestion |
+| 📦 Dependency Update Checker | fileEdited (deps) | Güvenlik açıkları, outdated paketler, upgrade yolu |
+| ⚖️ License Compliance | fileEdited (deps) | GPL/AGPL riski, lisans uyumluluğu |
 
 ---
 
@@ -233,4 +234,4 @@ Command Palette → "Open Kiro Hook UI"
 
 ---
 
-**🎉 28 Professional Hooks ile Enterprise Development!** 🚀
+**🎉 32 Professional Hooks ile Enterprise Development!** 🚀

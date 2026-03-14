@@ -5,21 +5,14 @@
       "args": ["-y", "@modelcontextprotocol/server-filesystem", "C:\\"],
       "description": "Access and manage files on your system",
       "disabled": false,
-      "autoApprove": [
-        "read_file",
-        "list_directory"
-      ]
+      "autoApprove": ["read_file", "list_directory"]
     },
     "memory": {
       "command": "npx",
       "args": ["-y", "@modelcontextprotocol/server-memory"],
       "description": "Persistent memory storage across conversations",
       "disabled": false,
-      "autoApprove": [
-        "create_entities",
-        "create_relations",
-        "add_observations"
-      ]
+      "autoApprove": ["create_entities", "create_relations", "add_observations"]
     },
     "sequential-thinking": {
       "command": "npx",
@@ -125,7 +118,7 @@
     },
     "sentry": {
       "command": "npx",
-      "args": ["-y", "@modelcontextprotocol/server-sentry"],
+      "args": ["-y", "@sentry/mcp-server"],
       "env": {
         "SENTRY_AUTH_TOKEN": "",
         "SENTRY_ORG": "",
@@ -149,6 +142,280 @@
         "EVERART_API_KEY": ""
       },
       "description": "AI image generation with EverArt",
+      "disabled": true,
+      "autoApprove": []
+    },
+    "tavily": {
+      "command": "npx",
+      "args": ["-y", "tavily-mcp"],
+      "env": {
+        "TAVILY_API_KEY": ""
+      },
+      "description": "AI-optimized web search with real-time results and direct answers — superior to Brave for LLM use cases",
+      "disabled": true,
+      "autoApprove": []
+    },
+    "notion": {
+      "command": "npx",
+      "args": ["-y", "@notionhq/notion-mcp-server"],
+      "env": {
+        "OPENAPI_MCP_HEADERS": "{\"Authorization\": \"Bearer YOUR_NOTION_TOKEN\", \"Notion-Version\": \"2022-06-28\"}"
+      },
+      "description": "Official Notion MCP — read/write pages, databases, and workspace content",
+      "disabled": true,
+      "autoApprove": []
+    },
+    "linear": {
+      "command": "npx",
+      "args": ["-y", "linear-mcp-server"],
+      "env": {
+        "LINEAR_API_KEY": ""
+      },
+      "description": "Linear project management — manage issues, projects, cycles, and teams via natural language",
+      "disabled": true,
+      "autoApprove": []
+    },
+    "stripe": {
+      "command": "npx",
+      "args": ["-y", "@stripe/agent-toolkit", "--tools=all"],
+      "env": {
+        "STRIPE_SECRET_KEY": ""
+      },
+      "description": "Official Stripe MCP — payments, customers, subscriptions, invoices, and billing operations",
+      "disabled": true,
+      "autoApprove": []
+    },
+    "figma": {
+      "command": "npx",
+      "args": ["-y", "figma-developer-mcp", "--figma-api-key", ""],
+      "env": {
+        "FIGMA_API_KEY": ""
+      },
+      "description": "Figma Dev Mode MCP — extract design specs, components, variables, and styles for code generation",
+      "disabled": true,
+      "autoApprove": []
+    },
+    "mongodb": {
+      "command": "npx",
+      "args": ["-y", "mongodb-mcp-server"],
+      "env": {
+        "MDB_MCP_CONNECTION_STRING": "mongodb://localhost:27017"
+      },
+      "description": "Official MongoDB MCP — query, aggregate, manage collections and indexes",
+      "disabled": true,
+      "autoApprove": []
+    },
+    "redis": {
+      "command": "npx",
+      "args": ["-y", "@modelcontextprotocol/server-redis"],
+      "env": {
+        "REDIS_URL": "redis://localhost:6379"
+      },
+      "description": "Redis cache operations — get/set keys, pub/sub, streams, and data structure management",
+      "disabled": true,
+      "autoApprove": []
+    },
+    "supabase": {
+      "command": "npx",
+      "args": ["-y", "@supabase/mcp-server-supabase"],
+      "env": {
+        "SUPABASE_ACCESS_TOKEN": ""
+      },
+      "description": "Supabase MCP — manage projects, databases, auth, storage, and edge functions",
+      "disabled": true,
+      "autoApprove": []
+    },
+    "google-workspace": {
+      "command": "uvx",
+      "args": ["workspace-mcp"],
+      "env": {
+        "GOOGLE_CLIENT_ID": "",
+        "GOOGLE_CLIENT_SECRET": ""
+      },
+      "description": "Google Workspace MCP — Gmail, Drive, Docs, Sheets, Calendar, Slides, Forms, Chat (12 services in one)",
+      "disabled": true,
+      "autoApprove": []
+    },
+    "discord": {
+      "command": "npx",
+      "args": ["-y", "@modelcontextprotocol/server-discord"],
+      "env": {
+        "DISCORD_TOKEN": "",
+        "DISCORD_GUILD_ID": ""
+      },
+      "description": "Discord bot integration — read/send messages, manage channels and server members",
+      "disabled": true,
+      "autoApprove": []
+    },
+    "datadog": {
+      "command": "npx",
+      "args": ["-y", "@datadog/mcp-server"],
+      "env": {
+        "DD_API_KEY": "",
+        "DD_APP_KEY": "",
+        "DD_SITE": "datadoghq.com"
+      },
+      "description": "Datadog MCP — query metrics, logs, traces, monitors, and dashboards",
+      "disabled": true,
+      "autoApprove": []
+    },
+    "grafana": {
+      "command": "npx",
+      "args": ["-y", "@grafana/mcp-grafana"],
+      "env": {
+        "GRAFANA_URL": "http://localhost:3000",
+        "GRAFANA_API_KEY": ""
+      },
+      "description": "Official Grafana MCP — query datasources, manage dashboards, alerts, and incidents",
+      "disabled": true,
+      "autoApprove": []
+    },
+    "pagerduty": {
+      "command": "npx",
+      "args": ["-y", "pagerduty-mcp-server"],
+      "env": {
+        "PAGERDUTY_API_KEY": ""
+      },
+      "description": "PagerDuty MCP — manage incidents, escalation policies, on-call schedules, and alerts",
+      "disabled": true,
+      "autoApprove": []
+    },
+    "gitlab": {
+      "command": "npx",
+      "args": ["-y", "@modelcontextprotocol/server-gitlab"],
+      "env": {
+        "GITLAB_PERSONAL_ACCESS_TOKEN": "",
+        "GITLAB_API_URL": "https://gitlab.com/api/v4"
+      },
+      "description": "GitLab MCP — manage repos, merge requests, pipelines, issues, and CI/CD",
+      "disabled": true,
+      "autoApprove": []
+    },
+    "jira": {
+      "command": "npx",
+      "args": ["-y", "jira-mcp-server"],
+      "env": {
+        "JIRA_HOST": "",
+        "JIRA_EMAIL": "",
+        "JIRA_API_TOKEN": ""
+      },
+      "description": "Jira MCP — create/update issues, manage sprints, boards, and project workflows",
+      "disabled": true,
+      "autoApprove": []
+    },
+    "confluence": {
+      "command": "npx",
+      "args": ["-y", "confluence-mcp"],
+      "env": {
+        "CONFLUENCE_HOST": "",
+        "CONFLUENCE_EMAIL": "",
+        "CONFLUENCE_API_TOKEN": ""
+      },
+      "description": "Confluence MCP — read/write pages, manage spaces, and search documentation",
+      "disabled": true,
+      "autoApprove": []
+    },
+    "vercel": {
+      "command": "npx",
+      "args": ["-y", "@vercel/mcp-adapter"],
+      "env": {
+        "VERCEL_TOKEN": ""
+      },
+      "description": "Vercel MCP — manage deployments, projects, domains, env vars, and logs",
+      "disabled": true,
+      "autoApprove": []
+    },
+    "cloudflare": {
+      "command": "npx",
+      "args": ["-y", "@cloudflare/mcp-server-cloudflare"],
+      "env": {
+        "CLOUDFLARE_API_TOKEN": "",
+        "CLOUDFLARE_ACCOUNT_ID": ""
+      },
+      "description": "Official Cloudflare MCP — manage Workers, KV, R2, D1, DNS, and Pages",
+      "disabled": true,
+      "autoApprove": []
+    },
+    "aws-docs": {
+      "command": "uvx",
+      "args": ["awslabs.aws-documentation-mcp-server@latest"],
+      "env": {
+        "FASTMCP_LOG_LEVEL": "ERROR"
+      },
+      "description": "AWS Documentation MCP — search and retrieve official AWS service docs and API references",
+      "disabled": true,
+      "autoApprove": []
+    },
+    "playwright": {
+      "command": "npx",
+      "args": ["-y", "@playwright/mcp"],
+      "description": "Official Playwright MCP — browser automation via accessibility tree, screenshots, and interactions (no CDP needed)",
+      "disabled": true,
+      "autoApprove": []
+    },
+    "context7": {
+      "command": "npx",
+      "args": ["-y", "@upstash/context7-mcp"],
+      "description": "Context7 MCP — fetch up-to-date library docs and code examples directly into prompts",
+      "disabled": true,
+      "autoApprove": []
+    },
+    "exa": {
+      "command": "npx",
+      "args": ["-y", "exa-mcp-server"],
+      "env": {
+        "EXA_API_KEY": ""
+      },
+      "description": "Exa MCP — semantic web search optimized for AI, with neural and keyword search modes",
+      "disabled": true,
+      "autoApprove": []
+    },
+    "airtable": {
+      "command": "npx",
+      "args": ["-y", "airtable-mcp-server"],
+      "env": {
+        "AIRTABLE_API_KEY": "",
+        "AIRTABLE_BASE_ID": ""
+      },
+      "description": "Airtable MCP — read/write records, manage tables, views, and fields",
+      "disabled": true,
+      "autoApprove": []
+    },
+    "twilio": {
+      "command": "npx",
+      "args": ["-y", "twilio-mcp"],
+      "env": {
+        "TWILIO_ACCOUNT_SID": "",
+        "TWILIO_AUTH_TOKEN": ""
+      },
+      "description": "Twilio MCP — send SMS/WhatsApp messages, manage phone numbers and conversations",
+      "disabled": true,
+      "autoApprove": []
+    },
+    "huggingface": {
+      "command": "npx",
+      "args": ["-y", "@huggingface/mcp-client"],
+      "env": {
+        "HF_TOKEN": ""
+      },
+      "description": "HuggingFace MCP — search models, datasets, run inference, and access the Hub API",
+      "disabled": true,
+      "autoApprove": []
+    },
+    "neon": {
+      "command": "npx",
+      "args": ["-y", "@neondatabase/mcp-server-neon"],
+      "env": {
+        "NEON_API_KEY": ""
+      },
+      "description": "Neon serverless Postgres MCP — manage branches, databases, and run SQL queries",
+      "disabled": true,
+      "autoApprove": []
+    },
+    "markitdown": {
+      "command": "uvx",
+      "args": ["markitdown-mcp"],
+      "description": "MarkItDown MCP — convert PDF, Word, Excel, PowerPoint, images, and audio to Markdown",
       "disabled": true,
       "autoApprove": []
     }

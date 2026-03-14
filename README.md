@@ -5,93 +5,292 @@
 [![GitHub forks](https://img.shields.io/github/forks/gkhantyln/kiro-professional-toolkit.svg)](https://github.com/gkhantyln/kiro-professional-toolkit/network)
 [![GitHub issues](https://img.shields.io/github/issues/gkhantyln/kiro-professional-toolkit.svg)](https://github.com/gkhantyln/kiro-professional-toolkit/issues)
 
-**Complete professional development toolkit for Kiro IDE** - Transform your development workflow with 19 Expert Hooks, 8 AI Agents, 14 Skills, 10 Steering Rules & 16 MCP Integrations.
+**Complete professional development toolkit for Kiro IDE** - Transform your development workflow with 32 Expert Hooks, 34 AI Agents, 50 Skills, 22 Steering Rules & 44 MCP Integrations.
 
 > 🎯 **Enterprise-grade development environment in one package**
 
 ## 📦 İÇERİK
 
-### 🤖 Agents (8 Adet)
+### 🤖 Agents (34 Adet)
 Bağımsız AI uzmanları:
-- **Code Reviewer**: Kod inceleme uzmanı
-- **Test Generator**: Test oluşturma uzmanı  
-- **Refactoring Assistant**: Kod iyileştirme uzmanı
-- **Documentation Writer**: Dokümantasyon uzmanı
-- **Security Scanner**: Güvenlik tarama uzmanı
-- **Performance Analyzer**: Performans analiz uzmanı
-- **Database Migration Expert**: Veritabanı migration uzmanı
 
-### 🎯 Hooks (19 Adet)
+**Kod Kalitesi & İnceleme**
+- **Code Reviewer**: PR review, SOLID, security, performance
+- **Refactoring Assistant**: Code smell tespiti, safe refactoring
+- **Tech Debt Analyzer**: Teknik borç envanteri ve roadmap
+- **Dependency Auditor**: CVE tarama, upgrade stratejisi, lisans uyumu
+
+**Test & Güvenlik**
+- **Test Generator**: Unit, integration, E2E test üretimi
+- **Security Scanner**: OWASP Top 10, vulnerability scanning
+- **Infrastructure Security**: Cloud security, IAM, secrets management
+- **Accessibility Auditor**: WCAG 2.1 AA/AAA, ARIA, keyboard nav
+
+**Performans & Veritabanı**
+- **Performance Analyzer**: Bottleneck tespiti, Core Web Vitals
+- **Database Migration Expert**: Zero-downtime migrations, rollback
+- **SQL Query Optimizer**: Execution plan, index önerileri, N+1 fix
+
+**Mimari & Tasarım**
+- **Backend Architect**: Microservices, CQRS, Event Sourcing, DDD
+- **System Design Expert**: Distributed systems, CAP theorem, scalability
+- **Architecture Decision Recorder**: ADR yazımı, design pattern seçimi
+- **API Architect**: REST/GraphQL/gRPC tasarımı, OpenAPI spec
+- **GraphQL Specialist**: Schema tasarımı, DataLoader, federation
+
+**Frontend & Mobile**
+- **Frontend Specialist**: React/Vue/Svelte, state management, perf
+- **Mobile Developer**: React Native, Flutter, iOS, Android
+- **Internationalization Expert**: i18n/l10n, RTL, locale formatting
+- **WebSocket & Realtime Expert**: WebSocket, WebRTC, SSE, pub/sub
+
+**DevOps & Cloud**
+- **DevOps Engineer**: CI/CD, Docker, Kubernetes, Terraform
+- **Cloud Cost Optimizer**: AWS/GCP/Azure maliyet analizi, FinOps
+- **Incident Responder**: Post-mortem, RCA, runbook, SLO/SLA
+- **Microservices Debugger**: Distributed tracing, cascading failure
+- **Release Manager**: Changelog, semantic versioning, hotfix
+
+**AI & Veri**
+- **ML Engineer**: MLOps, model deployment, RAG pipeline
+- **Data Engineer**: ETL pipeline, dbt, Spark, data modeling
+- **Prompt Engineer**: LLM prompt optimizasyonu, RAG tasarımı
+
+**Dokümantasyon & Onboarding**
+- **Documentation Writer**: API docs, README, architecture docs
+- **Code Onboarder**: Codebase özeti, getting started rehberi
+
+**Özel Domain**
+- **Blockchain Developer**: Smart contract audit, gas optimizasyonu
+- **CLI Tool Builder**: CLI araçları, shell scripts, TUI
+- **Java Spring Expert**: Spring Boot 3, Java 21 virtual threads, JPA optimizasyonu, Testcontainers
+- **FinOps Architect**: Maliyet-mimari dengesi, right-sizing, IaC cost analysis
+
+### 🎯 Hooks (32 Adet)
 Uzmanlık modları:
-- **Enterprise Dev Team**: Tam ekip yapısı
+- **Enterprise Dev Workflow**: Tam SDLC workflow, 7 rol, 5 quality gate
+- **Enterprise Dev Team**: 5 rol ekip yapısı (Owner, Frontend, Backend, UI/UX, QA)
+- **Enterprise Dev Team V2**: Enterprise Dev Team'in geliştirilmiş versiyonu
+- **Architecture Review**: ADR formatı, SOLID, design decisions
+- **Pre-Commit Quality Gate**: Secrets, console.log, SQL injection kontrolü
+- **Post-Write Code Review**: 6 kategori otomatik review
+- **Security Audit Shell**: Tehlikeli shell komutlarını engeller
+- **Pre-Deployment Checklist**: 10 kategori deployment validasyonu
+- **Accessibility Validator**: WCAG 2.1 AA compliance kontrolü
+- **Auto Test Generator**: Test stratejisi ve test case önerileri
+- **Performance Monitoring**: Core Web Vitals, API metrics analizi
+- **Git Commit Standards**: Conventional commits formatı
 - **Security Expert**: Güvenlik uzmanı
+- **Architecture Expert**: Mimari uzmanı
+- **QA/Testing Expert**: Test uzmanı
+- **Accessibility Expert**: Erişilebilirlik uzmanı
 - **Mobile Dev Expert**: Mobil geliştirme
-- **DevOps/SRE Expert**: Altyapı uzmanı
-- **ML/AI Expert**: Yapay zeka uzmanı
 - **Database Expert**: Veritabanı uzmanı
+- **DevOps/SRE Expert**: Altyapı uzmanı
+- **Game Dev Expert**: Oyun geliştirme
+- **ML/AI Expert**: Yapay zeka uzmanı
+- **Data Science Expert**: Veri bilimi
+- **Blockchain/Web3 Expert**: Blockchain uzmanı
 - **API Design Expert**: API tasarım uzmanı
 - **Performance Expert**: Performans uzmanı
-- **Accessibility Expert**: Erişilebilirlik uzmanı
-- **Architecture Expert**: Mimari uzmanı
-- **Blockchain/Web3 Expert**: Blockchain uzmanı
+- **Tech Writer Expert**: Teknik yazar
 - **Product Manager Expert**: Ürün yöneticisi
 - **IoT/Embedded Expert**: IoT uzmanı
-- **Technical Writer Expert**: Teknik yazar
-- **QA/Testing Expert**: Test uzmanı
-- **Game Dev Expert**: Oyun geliştirme
-- **Data Science Expert**: Veri bilimi
 - **Tech Lawyer**: Teknoloji hukuku
 - **Tech Psychologist**: Geliştirici psikolojisi
+- **Dependency Update Checker**: Güvenlik açıkları, outdated paketler, upgrade yolu
+- **License Compliance**: GPL/AGPL riski, lisans uyumluluğu kontrolü
 
-### 📋 Steering (10 Adet)
-Otomatik kurallar:
-- **coding-standards.md**: Genel kodlama standartları
-- **api-design-guidelines.md**: API tasarım kuralları
-- **typescript-guidelines.md**: TypeScript kuralları
-- **python-best-practices.md**: Python en iyi uygulamaları
-- **go-best-practices.md**: Go en iyi uygulamaları
-- **database-best-practices.md**: Veritabanı kuralları
-- **frontend-standards.md**: Frontend standartları
-- **security-headers.md**: Güvenlik başlıkları
-- **secrets-security.md**: Secret güvenliği
-- **security-checklist.md**: Güvenlik kontrol listesi
+### 📋 Steering (22 Adet)
+Otomatik kurallar — dosya tipine göre tetiklenir:
 
-### 💪 Skills (14 Adet)
+**AUTO (Her Zaman Aktif)**
+- **coding-standards.md**: SOLID, clean code, git commit standartları
+- **secrets-security.md**: Secret güvenliği, env var kuralları
+
+**FILE MATCH (Dosya Tipine Göre)**
+- **typescript-guidelines.md**: Type safety, generics, strict mode
+- **python-best-practices.md**: PEP 8, type hints, async/await, pytest
+- **go-best-practices.md**: Go idioms, error handling, concurrency
+- **cpp-best-practices.md**: C++23, RAII, std::expected, coroutines, SIMD
+- **rust-best-practices.md**: Ownership, Result/?, async Tokio, Clippy
+- **java-best-practices.md**: Spring Boot 3, Java 21 virtual threads, JPA, Testcontainers
+- **kotlin-best-practices.md**: Coroutines, Flow, sealed classes, KMP
+- **django-best-practices.md**: ORM optimizasyonu, N+1 önleme, Celery
+- **react-best-practices.md**: Hooks, useMemo/useCallback, RSC, Zustand
+- **graphql-standards.md**: Schema tasarımı, DataLoader, Relay pagination, depth limiting
+- **api-design-guidelines.md**: RESTful standards, pagination, rate limiting
+- **database-best-practices.md**: Schema design, indexing, query optimization
+- **frontend-standards.md**: Component structure, state management, a11y
+- **security-headers.md**: CSP, HSTS, CORS, rate limiting
+- **docker-kubernetes.md**: Multi-stage build, K8s manifests, HPA, PDB
+- **infrastructure-as-code.md**: Terraform modules, remote state, Pulumi, CDK
+- **performance-optimization.md**: Core Web Vitals, caching, profiling
+- **testing-standards.md**: Test piramidi, AAA pattern, coverage hedefleri
+
+**MANUAL (Chat'te #isim ile çağır)**
+- **security-checklist.md**: OWASP Top 10, pre-deployment audit
+- **microservices-patterns.md**: Circuit breaker, Saga, Outbox, CQRS
+
+### 💪 Skills (50 Adet)
 Hazır görevler:
-- **create-react-component**: React component oluştur
-- **create-api-endpoint**: API endpoint oluştur
-- **create-fastapi-endpoint**: FastAPI endpoint oluştur
-- **setup-testing**: Test altyapısı kur
-- **create-docker-setup**: Docker kurulumu
-- **setup-ci-cd**: CI/CD pipeline kur
-- **setup-monitoring**: Monitoring kur
-- **setup-secrets-management**: Secret yönetimi kur
-- **security-audit**: Güvenlik denetimi
-- **setup-authentication**: Kimlik doğrulama kur
-- **setup-database**: Veritabanı kur
-- **create-microservice**: Mikroservis oluştur
-- **create-graphql-api**: GraphQL API oluştur
-- **create-readme**: README oluştur
 
-### 🔌 MCP Servers (16 Adet)
+**Frontend**
+- **create-react-component**: React component oluştur (TSX + Test + Storybook)
+- **create-nextjs-app**: Next.js 15 App Router projesi kur
+- **create-design-system**: Token tabanlı design system oluştur
+- **setup-testing**: Test altyapısı kur (Vitest + RTL + Playwright)
+
+**Backend**
+- **create-api-endpoint**: REST API endpoint oluştur
+- **create-fastapi-endpoint**: FastAPI endpoint oluştur
+- **create-graphql-api**: GraphQL API oluştur
+- **create-go-service**: Production Go servisi oluştur
+- **create-python-service**: Production Python servisi oluştur
+- **setup-authentication**: JWT + OAuth2 + MFA kur
+- **create-openapi-spec**: OpenAPI 3.1 spec oluştur
+
+**Database**
+- **setup-database**: ORM + pooling + migrations kur
+
+**Architecture**
+- **create-microservice**: Mikroservis oluştur
+- **setup-event-driven**: Kafka + Outbox + Saga kur
+
+**Mobile**
+- **create-mobile-app**: React Native + Expo uygulaması oluştur
+- **create-chrome-extension**: Chrome Extension MV3 oluştur
+
+**DevOps**
+- **create-docker-setup**: Multi-stage Docker konfigürasyonu
+- **setup-ci-cd**: GitHub Actions CI/CD pipeline
+- **setup-kubernetes**: K8s manifests + HPA + RBAC
+- **setup-terraform**: IaC modules + remote state
+
+**Observability**
+- **setup-monitoring**: Winston + Prometheus + Sentry
+- **setup-observability**: OpenTelemetry + Jaeger + Grafana
+
+**Caching & Messaging**
+- **setup-redis-cache**: Redis + cache-aside + distributed lock
+- **setup-websocket-server**: Socket.io + Redis adapter + presence
+
+**Payments**
+- **setup-stripe-payments**: Subscriptions + webhooks + portal
+
+**AI/ML**
+- **setup-ml-pipeline**: MLflow + Optuna + FastAPI serving
+- **setup-data-pipeline**: Airflow + dbt + Great Expectations
+
+**Feature Management**
+- **setup-feature-flags**: OpenFeature + LaunchDarkly + A/B testing
+
+**Security**
+- **security-audit**: OWASP + Snyk + Semgrep + Trivy
+- **setup-secrets-management**: AWS Secrets Manager + Vault
+
+**Documentation**
+- **create-readme**: Kapsamlı README oluştur
+
+**Django & Flask**
+- **create-django-app**: Django 5 + Custom User + DRF + SimpleJWT + Celery + cachalot
+- **create-django-rest-api**: ViewSet + cursor pagination + drf-spectacular + query optimization
+- **create-flask-app**: Flask 3 factory + Blueprint + SQLAlchemy 2 + JWT + Marshmallow + Celery
+- **create-flask-rest-api**: Flask-Smorest + OpenAPI 3.1 + MethodView + service layer + ETag
+
+**Python Advanced**
+- **create-python-async-worker**: Celery + asyncio + circuit breaker + DLQ + Prometheus
+- **create-python-grpc-service**: gRPC + protobuf + async interceptors + reflection
+- **setup-python-testing-advanced**: Hypothesis + mutmut + Pact + pytest-benchmark
+- **create-python-cli-tool**: Typer + Rich TUI + async + plugin architecture + hatch
+- **setup-python-package**: hatch + src layout + py.typed + OIDC PyPI publish
+
+**C++ Advanced**
+- **create-cpp-modern-service**: C++23 + Boost.Asio + coroutines + spdlog + vcpkg
+- **setup-cpp-build-system**: CMake presets + Conan 2 + sanitizers + clang-tidy + fuzzing
+- **create-cpp-high-performance-lib**: Lock-free SPSC + SIMD AVX2 + memory pool + SoA
+- **create-cpp-embedded-firmware**: FreeRTOS + HAL abstraction + HSM + watchdog + OTA
+- **create-cpp-game-engine-component**: Archetype ECS + job system + SIMD math + work-stealing
+
+**Rust & Java**
+- **create-rust-service**: Axum + Tokio + SQLx + Tower middleware + OpenTelemetry
+- **create-java-spring-service**: Spring Boot 3.3 + Java 21 virtual threads + Testcontainers + GraalVM
+
+**GraphQL & Messaging**
+- **setup-graphql-server**: Apollo/Yoga + Pothos schema builder + DataLoader + persisted queries
+- **setup-message-queue**: RabbitMQ + AWS SQS + DLQ + retry/backoff + Outbox pattern
+
+**Edge & CDN**
+- **setup-cdn-edge**: Cloudflare Workers + Hono + Durable Objects + KV + R2
+
+### 🔌 MCP Servers (44 Adet)
 Dış sistem entegrasyonları:
+
+**Temel (Varsayılan Aktif)**
 - **filesystem**: Dosya sistemi erişimi ✅
 - **memory**: Kalıcı hafıza ✅
 - **sequential-thinking**: Gelişmiş düşünme ✅
-- **github**: GitHub entegrasyonu
+
+**Geliştirme & Versiyon Kontrol**
+- **github**: GitHub repo, issue, PR yönetimi
+- **gitlab**: GitLab repo, MR, CI/CD pipeline
+- **git**: Yerel Git işlemleri
+
+**Veritabanı**
 - **postgres**: PostgreSQL veritabanı
-- **brave-search**: Web araması
-- **google-maps**: Google Maps
-- **slack**: Slack entegrasyonu
-- **puppeteer**: Browser otomasyonu
-- **aws-kb-retrieval**: AWS Knowledge Base
 - **sqlite**: SQLite veritabanı
-- **docker**: Docker yönetimi
-- **kubernetes**: Kubernetes yönetimi
-- **git**: Git işlemleri
-- **sentry**: Hata izleme
+- **mongodb**: MongoDB NoSQL (Official)
+- **redis**: Redis cache ve pub/sub
+- **supabase**: Supabase (Postgres + Auth + Storage)
+- **neon**: Neon serverless Postgres
+
+**Proje Yönetimi**
+- **notion**: Notion workspace (Official)
+- **linear**: Linear issue tracker (Official)
+- **jira**: Jira issue ve sprint yönetimi
+- **confluence**: Atlassian Confluence dokümantasyon
+- **airtable**: Airtable veritabanı ve tablolar
+
+**İletişim**
+- **slack**: Slack mesajlaşma
+- **discord**: Discord bot entegrasyonu
+- **twilio**: SMS ve WhatsApp bildirimleri
+
+**Cloud & Altyapı**
+- **docker**: Docker container yönetimi
+- **kubernetes**: Kubernetes cluster yönetimi
+- **vercel**: Vercel deployment yönetimi
+- **cloudflare**: Cloudflare Workers, KV, R2, DNS (Official)
+- **aws-kb-retrieval**: AWS Knowledge Base
+- **aws-docs**: AWS resmi dokümantasyon arama
+
+**Monitoring & Observability**
+- **sentry**: Hata izleme (Official)
+- **datadog**: Metrics, log ve trace izleme (Official)
+- **grafana**: Dashboard ve alerting (Official)
+- **pagerduty**: Incident yönetimi
+
+**Arama & Web**
+- **brave-search**: Brave Search API
+- **tavily**: AI-optimized web arama (LLM için üstün)
+- **exa**: Semantic web arama
 - **fetch**: Web içerik çekme
+- **playwright**: Browser otomasyonu (Official, accessibility tree)
+- **puppeteer**: Browser otomasyonu ve scraping
+
+**Tasarım & Medya**
+- **figma**: Figma Dev Mode — design specs ve component çıkarma
 - **everart**: AI görsel oluşturma
+
+**AI & Dokümantasyon**
+- **huggingface**: HuggingFace model hub ve inference
+- **context7**: Güncel kütüphane dokümantasyonu
+- **markitdown**: PDF/Word/Excel/PPT → Markdown dönüştürme
+
+**Ödeme & Diğer**
+- **stripe**: Stripe ödeme sistemi (Official)
+- **google-maps**: Google Maps ve geocoding
+- **google-workspace**: Gmail, Drive, Docs, Sheets, Calendar (12 servis)
 
 ## 🚀 KURULUM
 
@@ -147,13 +346,112 @@ Chat'te `#skill-name` yazarak:
 3. `mcp.json`'da `GITHUB_PERSONAL_ACCESS_TOKEN` alanına yapıştır
 4. `"disabled": false` yap
 
+### GitLab MCP
+1. GitLab → User Settings → Access Tokens
+2. Token oluştur (api, read_repository izinleri)
+3. `GITLAB_PERSONAL_ACCESS_TOKEN` alanına yapıştır
+4. `"disabled": false` yap
+
 ### Brave Search MCP
 1. https://brave.com/search/api/ → API key al
 2. `BRAVE_API_KEY` alanına yapıştır
 3. `"disabled": false` yap
 
+### Tavily MCP (Önerilen Arama)
+1. https://tavily.com → API key al (ücretsiz tier mevcut)
+2. `TAVILY_API_KEY` alanına yapıştır
+3. `"disabled": false` yap
+
 ### PostgreSQL MCP
 1. Connection string'i güncelle: `postgresql://user:pass@host:port/db`
+2. `"disabled": false` yap
+
+### MongoDB MCP
+1. `MDB_MCP_CONNECTION_STRING` alanına connection string yapıştır
+2. `"disabled": false` yap
+
+### Redis MCP
+1. `REDIS_URL` alanını güncelle: `redis://localhost:6379`
+2. `"disabled": false` yap
+
+### Supabase MCP
+1. Supabase Dashboard → Account → Access Tokens
+2. `SUPABASE_ACCESS_TOKEN` alanına yapıştır
+3. `"disabled": false` yap
+
+### Neon MCP
+1. https://neon.tech → API Keys → New API Key
+2. `NEON_API_KEY` alanına yapıştır
+3. `"disabled": false` yap
+
+### Notion MCP (Official)
+1. https://www.notion.so/my-integrations → New Integration
+2. Token'ı `OPENAPI_MCP_HEADERS` içindeki `Bearer YOUR_NOTION_TOKEN` kısmına yapıştır
+3. `"disabled": false` yap
+
+### Linear MCP
+1. Linear → Settings → API → Personal API Keys
+2. `LINEAR_API_KEY` alanına yapıştır
+3. `"disabled": false` yap
+
+### Jira MCP
+1. https://id.atlassian.com/manage-profile/security/api-tokens → Token oluştur
+2. `JIRA_HOST`, `JIRA_EMAIL`, `JIRA_API_TOKEN` alanlarını doldur
+3. `"disabled": false` yap
+
+### Confluence MCP
+1. Jira ile aynı API token kullanılabilir
+2. `CONFLUENCE_HOST`, `CONFLUENCE_EMAIL`, `CONFLUENCE_API_TOKEN` alanlarını doldur
+3. `"disabled": false` yap
+
+### Stripe MCP (Official)
+1. Stripe Dashboard → Developers → API Keys → Secret key
+2. `STRIPE_SECRET_KEY` alanına yapıştır
+3. `"disabled": false` yap
+
+### Figma MCP
+1. Figma → Account Settings → Personal Access Tokens
+2. `FIGMA_API_KEY` alanına yapıştır ve args içindeki `""` kısmını da doldur
+3. `"disabled": false` yap
+
+### Vercel MCP
+1. Vercel Dashboard → Settings → Tokens → Create Token
+2. `VERCEL_TOKEN` alanına yapıştır
+3. `"disabled": false` yap
+
+### Cloudflare MCP (Official)
+1. Cloudflare Dashboard → My Profile → API Tokens → Create Token
+2. `CLOUDFLARE_API_TOKEN` ve `CLOUDFLARE_ACCOUNT_ID` alanlarını doldur
+3. `"disabled": false` yap
+
+### Datadog MCP (Official)
+1. Datadog → Organization Settings → API Keys + Application Keys
+2. `DD_API_KEY` ve `DD_APP_KEY` alanlarını doldur
+3. `"disabled": false` yap
+
+### Grafana MCP (Official)
+1. Grafana → Administration → Service Accounts → Add token
+2. `GRAFANA_URL` ve `GRAFANA_API_KEY` alanlarını doldur
+3. `"disabled": false` yap
+
+### Sentry MCP (Official)
+1. Sentry → Settings → Auth Tokens → Create New Token
+2. `SENTRY_AUTH_TOKEN`, `SENTRY_ORG`, `SENTRY_PROJECT` alanlarını doldur
+3. `"disabled": false` yap
+
+### Google Workspace MCP (12 Servis)
+1. Google Cloud Console → OAuth 2.0 credentials oluştur
+2. `GOOGLE_CLIENT_ID` ve `GOOGLE_CLIENT_SECRET` alanlarını doldur
+3. `uvx` kurulu olmalı: `pip install uv`
+4. `"disabled": false` yap
+
+### AWS Documentation MCP
+1. API key gerektirmez
+2. `uvx` kurulu olmalı: `pip install uv`
+3. `"disabled": false` yap
+
+### Playwright MCP (Official)
+1. API key gerektirmez
 2. `"disabled": false` yap
 
 ### Docker MCP (API key gerektirmez)
@@ -161,6 +459,43 @@ Chat'te `#skill-name` yazarak:
 
 ### Puppeteer MCP (API key gerektirmez)
 1. Sadece `"disabled": false` yap
+
+### Context7 MCP (API key gerektirmez)
+1. Sadece `"disabled": false` yap
+
+### MarkItDown MCP (API key gerektirmez)
+1. `uvx` kurulu olmalı: `pip install uv`
+2. `"disabled": false` yap
+
+### Exa MCP
+1. https://exa.ai → Dashboard → API Keys
+2. `EXA_API_KEY` alanına yapıştır
+3. `"disabled": false` yap
+
+### HuggingFace MCP
+1. https://huggingface.co/settings/tokens → New Token
+2. `HF_TOKEN` alanına yapıştır
+3. `"disabled": false` yap
+
+### Discord MCP
+1. Discord Developer Portal → New Application → Bot → Token
+2. `DISCORD_TOKEN` ve `DISCORD_GUILD_ID` alanlarını doldur
+3. `"disabled": false` yap
+
+### Twilio MCP
+1. Twilio Console → Account SID ve Auth Token
+2. `TWILIO_ACCOUNT_SID` ve `TWILIO_AUTH_TOKEN` alanlarını doldur
+3. `"disabled": false` yap
+
+### Airtable MCP
+1. https://airtable.com/create/tokens → Personal Access Token
+2. `AIRTABLE_API_KEY` ve `AIRTABLE_BASE_ID` alanlarını doldur
+3. `"disabled": false` yap
+
+### PagerDuty MCP
+1. PagerDuty → My Profile → User Settings → API Access Key
+2. `PAGERDUTY_API_KEY` alanına yapıştır
+3. `"disabled": false` yap
 
 ## 🎯 KULLANIM ÖRNEKLERİ
 

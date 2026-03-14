@@ -1,13 +1,13 @@
 @echo off
 echo ========================================
-echo    KIRO ALL-IN-ONE KURULUM SCRIPTI
+echo    KIRO PROFESSIONAL TOOLKIT KURULUM
 echo ========================================
 echo.
 
 REM Mevcut dizini kontrol et
 if not exist "agents" (
     echo HATA: agents klasoru bulunamadi!
-    echo Bu scripti KIRO_ALLINONE klasoru icinde calistirin.
+    echo Bu scripti kiro-professional-toolkit klasoru icinde calistirin.
     pause
     exit /b 1
 )
@@ -19,13 +19,14 @@ if not exist ".kiro\steering" mkdir ".kiro\steering"
 if not exist ".kiro\skills" mkdir ".kiro\skills"
 if not exist ".kiro\hooks" mkdir ".kiro\hooks"
 if not exist ".kiro\settings" mkdir ".kiro\settings"
+echo ✓ Klasor yapisi olusturuldu
 
 echo [2/6] Agents kopyalaniyor...
 copy "agents\*.json" ".kiro\agents\" >nul 2>&1
 if %errorlevel% neq 0 (
     echo UYARI: Agents kopyalanamadi
 ) else (
-    echo ✓ Agents basariyla kopyalandi
+    echo ✓ 34 Agent basariyla kopyalandi
 )
 
 echo [3/6] Steering dosyalari kopyalaniyor...
@@ -33,7 +34,7 @@ copy "steering\*.md" ".kiro\steering\" >nul 2>&1
 if %errorlevel% neq 0 (
     echo UYARI: Steering dosyalari kopyalanamadi
 ) else (
-    echo ✓ Steering dosyalari basariyla kopyalandi
+    echo ✓ 22 Steering dosyasi basariyla kopyalandi
 )
 
 echo [4/6] Skills kopyalaniyor...
@@ -41,7 +42,7 @@ copy "skills\*.md" ".kiro\skills\" >nul 2>&1
 if %errorlevel% neq 0 (
     echo UYARI: Skills kopyalanamadi
 ) else (
-    echo ✓ Skills basariyla kopyalandi
+    echo ✓ 50 Skill basariyla kopyalandi
 )
 
 echo [5/6] Hooks kopyalaniyor...
@@ -49,7 +50,7 @@ copy "hooks\*.hook" ".kiro\hooks\" >nul 2>&1
 if %errorlevel% neq 0 (
     echo UYARI: Hooks kopyalanamadi
 ) else (
-    echo ✓ Hooks basariyla kopyalandi
+    echo ✓ 32 Hook basariyla kopyalandi
 )
 
 echo [6/6] MCP ayarlari kopyalaniyor...
@@ -57,29 +58,30 @@ copy "mcp\mcp.json" ".kiro\settings\mcp.json" >nul 2>&1
 if %errorlevel% neq 0 (
     echo UYARI: MCP ayarlari kopyalanamadi
 ) else (
-    echo ✓ MCP ayarlari basariyla kopyalandi
+    echo ✓ 44 MCP Server ayari basariyla kopyalandi
 )
 
 echo.
 echo ========================================
-echo           KURULUM TAMAMLANDI!
+echo         KURULUM TAMAMLANDI!
 echo ========================================
 echo.
-echo Kurulumlar:
-echo ✓ 8 Agent
-echo ✓ 19 Hook
-echo ✓ 10 Steering dosyasi
-echo ✓ 14 Skill
-echo ✓ 16 MCP Server
+echo Yuklenenler:
+echo ✓ 34 Agent
+echo ✓ 32 Hook
+echo ✓ 22 Steering dosyasi
+echo ✓ 50 Skill
+echo ✓ 44 MCP Server
 echo.
 echo SONRAKI ADIMLAR:
 echo 1. Kiro'yu yeniden baslatin
 echo 2. Sol panel "Agent Hooks" bolumunu kontrol edin
-echo 3. MCP ayarlarini yapmak icin README.md dosyasini okuyun
+echo 3. MCP'leri etkinlestirmek icin mcp/README.md okuyun
 echo.
 echo Kullanim ornekleri:
 echo - Hook: Sol panel ^> Agent Hooks ^> Play butonu
 echo - Skill: Chat'te #create-react-component Button
 echo - Steering: Otomatik aktif (dosya tipine gore)
+echo - MCP: Command Palette ^> "MCP: List Servers"
 echo.
 pause

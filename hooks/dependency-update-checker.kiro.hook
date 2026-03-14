@@ -1,0 +1,14 @@
+{
+  "enabled": true,
+  "name": "📦 Dependency Update Checker",
+  "description": "Checks for outdated dependencies, security vulnerabilities and suggests safe upgrade paths",
+  "version": "1.0.0",
+  "when": {
+    "type": "fileEdited",
+    "patterns": ["package.json", "requirements.txt", "pyproject.toml", "go.mod", "Cargo.toml", "pom.xml", "build.gradle"]
+  },
+  "then": {
+    "type": "askAgent",
+    "prompt": "📦 DEPENDENCY UPDATE CHECKER\n\n═══════════════════════════════════════════════════════════════\nA dependency file was modified. Perform a comprehensive dependency audit:\n═══════════════════════════════════════════════════════════════\n\n**1. SECURITY VULNERABILITIES**\n- Check for known CVEs in current dependencies\n- Identify critical/high severity issues requiring immediate update\n- Flag any dependencies with active security advisories\n- Check for dependencies with no recent maintenance (>2 years)\n\n**2. OUTDATED DEPENDENCIES**\nFor each major dependency, check:\n- Current version vs latest stable version\n- Breaking changes in newer versions\n- Migration effort (patch/minor = low, major = high)\n- Deprecation warnings\n\n**3. SAFE UPGRADE PATH**\nProvide prioritized upgrade recommendations:\n```\n🔴 CRITICAL (security) — upgrade immediately:\n  lodash 4.17.15 → 4.17.21 (CVE-2021-23337)\n\n🟡 RECOMMENDED (outdated > 6 months):\n  react 18.2.0 → 18.3.1 (minor, safe)\n  typescript 5.2.0 → 5.4.5 (minor, safe)\n\n🟢 OPTIONAL (latest available):\n  eslint 8.x → 9.x (major, breaking changes)\n```\n\n**4. DEPENDENCY HEALTH CHECK**\n- Bundle size impact (for frontend deps)\n- License compatibility (MIT/Apache/BSD = OK, GPL = caution)\n- Transitive dependency conflicts\n- Duplicate dependencies\n\n**5. COMMANDS TO RUN**\nProvide exact commands:\n```bash\n# npm\nnpm audit fix\nnpm outdated\nnpx npm-check-updates -u --target minor\n\n# Python\npip-audit\npip list --outdated\nuv lock --upgrade-package <package>\n\n# Go\ngo list -u -m all\ngo get -u ./...\n\n# Rust\ncargo audit\ncargo update\n```\n\nAnalyze the modified dependency file and provide specific, actionable recommendations."
+  }
+}
